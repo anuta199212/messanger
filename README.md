@@ -1,1 +1,1 @@
-# messanger
+Ссылка на макет [MessageApp](https://www.figma.com/file/BrNECnizIJE0fYCNMVUZPJ/MessageApp?node-id=0%3A1)
