@@ -5,30 +5,29 @@
     {{> meta}}
 </head>
 
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
-            <form class="login100-form validate-form">
+<div class="form-panel">
+    <div class="form-panel-wrapper">
+        <form class="form">
 
-                <span class="login100-form-title p-b-20">
-                    Вход
-                </span>
+            <span class="form-title">
+                Вход
+            </span>
 
-                {{#each login.fields}}
-                {{> inputField}}
-                {{/each}}
+            {{#each login.fields}}
+            {{> inputField}}
+            {{/each}}
 
-                {{> button text="Войти" class="p-t-115"}}
+            {{> button text="Войти" class="p-t-115"}}
 
-                <div class="text-center p-t-15">
-                    <a class="txt2" href="/src/layouts/signup.hbs">
-                        Регистрация
-                    </a>
-                </div>
+            <div class="text-align-center p-t-15">
+                <a class="text-primary" href="/src/layouts/signup.hbs">
+                    Регистрация
+                </a>
+            </div>
 
-            </form>
-        </div>
+        </form>
     </div>
 </div>
+
 
 </html>

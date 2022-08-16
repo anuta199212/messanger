@@ -6,29 +6,26 @@ first_name: "Имя пользователя"
 <head>
     <title>Изменить данные</title>
     {{> meta}}
-
 </head>
 
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
-            <form class="login100-form validate-form">
+<div class="form-panel">
+    <div class="form-panel-wrapper">
+        <form class="form">
 
-                <span class="login100-form-title p-b-48">
-                    <a href="/src/layouts/profile/avatarEdit.hbs"><img src="/static/image-plus-outline.svg" alt="Avatar"
-                            style="width: 60px;"></a>
-                </span>
+            <span class="avatar">
+                <a href="/src/layouts/profile/avatarEdit.hbs"><img src="/static/image-plus-outline.svg" alt="Avatar"
+                        style="width: 60px;"></a>
+            </span>
 
-                <div>
-                    {{#each profile.fields}}
-                    {{>inputField}}
-                    {{/each}}
-                </div>
+            <div>
+                {{#each profile.fields}}
+                {{>inputField}}
+                {{/each}}
+            </div>
 
-                {{> button text="Сохранить" class="p-t-50"}}
+            {{> button text="Сохранить" class="p-t-50"}}
 
-            </form>
-        </div>
+        </form>
     </div>
 </div>
 

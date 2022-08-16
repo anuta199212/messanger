@@ -9,15 +9,24 @@ body, html {
   font-family: Inter;
 }
 
-.limiter {
+.form {
   width: 100%;
-  margin: 0 auto;
 }
 
-.container-login100 {
+.form-title {
+  color: #252525;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+}
+
+.form-panel {
   width: 100%;
   min-height: 100vh;
-  background: #f2f2f2;
+  background: #f3f3f3;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -25,10 +34,10 @@ body, html {
   display: flex;
 }
 
-.wrap-login100 {
-  width: 390px;
-  -o-box-shadow: 0 5px 10px 0px #0000001a;
+.form-panel-wrapper {
+  width: 410px;
   -ms-box-shadow: 0 5px 10px 0px #0000001a;
+  -o-box-shadow: 0 5px 10px 0px #0000001a;
   background: #fff;
   border-radius: 10px;
   padding: 77px 55px 33px;
@@ -36,29 +45,12 @@ body, html {
   box-shadow: 0 5px 10px #0000001a;
 }
 
-.login100-form {
-  width: 100%;
-}
-
-.login100-form-title {
-  color: #333;
-  text-align: center;
-  font-family: Inter;
-  font-size: 20px;
-  line-height: 1.2;
-  display: block;
-}
-
-.login100-form-title i {
-  font-size: 60px;
-}
-
-input, textarea {
+input {
   border: none;
   outline: none;
 }
 
-textarea:focus, input:focus {
+input:focus {
   border-color: #0000 !important;
 }
 
@@ -66,26 +58,18 @@ input:focus::-webkit-input-placeholder, input:focus:-moz-placeholder, input:focu
   color: #0000;
 }
 
-textarea:focus::-webkit-input-placeholder, textarea:focus:-moz-placeholder, textarea:focus::-moz-placeholder, textarea:focus:-ms-input-placeholder {
-  color: #0000;
-}
-
 input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {
   color: #adadad;
 }
 
-textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder {
-  color: #adadad;
-}
-
-.wrap-input100 {
+.input-field-wrapper {
   width: 100%;
   border-bottom: 2px solid #adadad;
   margin-bottom: 37px;
   position: relative;
 }
 
-.input100 {
+.input-field {
   color: #555;
   width: 100%;
   height: 45px;
@@ -97,7 +81,7 @@ textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-p
   display: block;
 }
 
-.focus-input100 {
+.input-field-focus {
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -107,60 +91,22 @@ textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-p
   left: 0;
 }
 
-.focus-input100:before {
-  content: "";
-  width: 0;
-  height: 2px;
-  -o-transition: all .4s;
-  background: #3369f3;
-  transition: all .4s;
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-}
-
-.focus-input100:after {
+.input-field-focus:after {
   color: #999;
   content: attr(data-placeholder);
   width: 100%;
-  -o-transition: all .4s;
   padding-left: 5px;
   font-family: Inter;
   font-size: 13px;
   line-height: 1.2;
-  transition: all .4s;
   display: block;
   position: absolute;
-  top: 16px;
+  top: 15px;
   left: 0;
 }
 
-.input100:focus + .focus-input100:after, .has-val.input100 + .focus-input100:after {
+.input-field:focus + .input-field-focus:after {
   top: -15px;
-}
-
-.input100:focus + .focus-input100:before, .has-val.input100 + .focus-input100:before {
-  width: 100%;
-}
-
-.btn-show-pass {
-  color: #999;
-  height: 100%;
-  cursor: pointer;
-  -o-transition: all .4s;
-  align-items: center;
-  padding-right: 5px;
-  font-size: 15px;
-  transition: all .4s;
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.btn-show-pass:hover, .btn-show-pass.active {
-  color: #3369f3;
 }
 
 button {
@@ -173,18 +119,17 @@ button:hover {
   cursor: pointer;
 }
 
-iframe {
-  border: none !important;
-}
-
-.container-login100-form-btn {
+.form-panel-btn {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 13px;
-  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
 }
 
-.wrap-login100-form-btn {
+.form-panel-btn-wrapper {
   width: 100%;
   z-index: 1;
   border-radius: 5px;
@@ -194,7 +139,7 @@ iframe {
   overflow: hidden;
 }
 
-.login100-form-bgbtn {
+.form-panel-bgbtn {
   z-index: -1;
   width: 300%;
   height: 100%;
@@ -204,7 +149,7 @@ iframe {
   left: -100%;
 }
 
-.login100-form-btn {
+.form-panel-form-btn {
   color: #fff;
   width: 100%;
   height: 50px;
@@ -214,75 +159,49 @@ iframe {
   font-family: Inter;
   font-size: 15px;
   line-height: 1.2;
-  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
 }
 
-.wrap-login100-form-btn:hover .login100-form-bgbtn {
+.form-panel-btn-wrapper:hover .form-panel-bgbtn {
   left: 0;
 }
 
-.validate-input {
-  position: relative;
-}
-
-.alert-validate:before {
-  content: attr(data-validate);
-  max-width: 70%;
-  pointer-events: none;
-  color: #c80000;
-  text-align: left;
-  visibility: hidden;
-  opacity: 0;
-  -o-transition: opacity .4s;
-  background-color: #fff;
-  border: 1px solid #c80000;
-  border-radius: 2px;
-  padding: 4px 25px 4px 10px;
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  line-height: 1.4;
-  transition: opacity .4s;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.alert-validate:after {
-  content: "";
-  color: #c80000;
-  background-color: #fff;
-  font-family: FontAwesome;
-  font-size: 16px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-}
-
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (max-width: 992px) {
-  .alert-validate:before {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.txt2 {
+.text-primary {
   color: #3369f3;
   font-family: Inter;
   font-size: 13px;
 }
 
-.txt1 {
+.text-danger {
   color: red;
   font-family: Inter;
   font-size: 13px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.error-form-title {
+  color: #252525;
+  text-align: center;
+  font-family: Inter;
+  font-size: 40px;
+  line-height: 1.2;
+  display: block;
+}
+
+.avatar {
+  text-align: center;
+  padding-bottom: 45px;
+  display: block;
 }
 
 .p-t-15 {
@@ -295,39 +214,6 @@ iframe {
 
 .p-t-115 {
   padding-top: 115px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-middle {
-  vertical-align: middle;
-}
-
-.error-form-title {
-  color: #333;
-  text-align: center;
-  font-family: Inter;
-  font-size: 40px;
-  line-height: 1.2;
-  display: block;
-}
-
-.p-b-20 {
-  padding-bottom: 20px;
-}
-
-.p-b-48 {
-  padding-bottom: 48px;
 }
 
 /*# sourceMappingURL=index.4a508c1d.css.map */
