@@ -10,7 +10,7 @@
         <div class="wrap-login100">
             <form class="login100-form validate-form">
 
-                <span class="login100-form-title p-b-26">
+                <span class="login100-form-title p-b-20">
                     Вход
                 </span>
 
@@ -18,12 +18,7 @@
                 {{> inputField}}
                 {{/each}}
 
-                <div class="container-login100-form-btn p-t-115">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit">Войти</button>
-                    </div>
-                </div>
+                {{> button text="Войти" class="p-t-115"}}
 
                 <div class="text-center p-t-15">
                     <a class="txt2" href="/src/layouts/signup.hbs">
