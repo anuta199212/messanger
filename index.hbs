@@ -1,16 +1,18 @@
 <html>
 
+<head>
+    <title>Menu</title>
+    {{> meta}}
+</head>
+
 <body>
-    <div id="{{ id }}"></div>
-    <a href="/src/modules/login.html">Авторизация</a>
-    <br />
-    <a href="/src/modules/signup.html">Регистрация</a>
-    <br />
-    <a href="/src/modules/profile.html">Профиль</a>
-    <br />
-    <a href="/src/modules/error500.html">Ошибка 500</a>
-    <br />
-    <a href="/src/modules/error404.html">Ошибка 404</a>
+    <ul>
+        {{#each navigation.pages}}
+        <li>
+            <a href="{{this.url}}">{{this.title}}</a>
+        </li>
+        {{/each}}
+    </ul>
 </body>
 
 </html>
